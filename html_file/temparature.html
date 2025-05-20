@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+    <link rel="shortcut icon" href="/img_file/Task free icons designed by Prosymbols.jpeg" type="image/x-icon">
+    <style>
+               * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size:20px;
+    background-image: url(https://cdn.pixabay.com/animation/2023/02/19/06/46/06-46-06-605_512.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+img{
+    height: 50px;
+    width: 50px;
+    float:left;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+header {
+    background-color: #0a040456;
+    color: #fff;
+    padding: 10px 0;
+}
+
+
+nav {
+    float: right;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #555;
+}
+
+.content {
+    padding: 50px 0;
+    text-align: center;
+    color: rgb(179, 219, 219);
+}
+#box{
+     margin-top: 250px;
+    margin-left: 380px;
+    margin-right: 380px;
+  /* background-color:#c062df;  */
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.btn1{
+ width: 100px;
+  padding: 10px;
+  background: #6b21a8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+.btn2{
+     width: 100px;
+  padding: 10px;
+  background: #6b21a8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+.btn3{
+     width: 100px;
+  padding: 10px;
+  background: #6b21a8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+#count{
+    font-size:100px;
+    color: rgb(243, 5, 5);
+}
+    </style>
+</head>
+<body>
+     <header>
+        <div class="container">
+            <div id="logo">
+            <img src="/img_file/Task free icons designed by Prosymbols.jpeg" alt="">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/html_file/home.html" target="_blank">Home</a></li>
+                    <li><a href="/html_file/sum.html" target="_blank">Sum</a></li>
+                    <li><a href="/html_file/temparature.html" target="_blank">Temparature</a></li>
+                    <li><a href="/html_file/calculator.html" target="_blank">Calculator</a></li>
+                    <li><a href="/html_file/timer.html" target="_blank">timer</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<div id="box">
+    <div id="count"></div>
+    <br>
+    <br>
+
+    <button class="btn1" type="button1" onclick="start()">start</button>
+    <button class="btn2" type="button2" onclick="stop()">stop</button>
+    <button class="btn3" type="button3" onclick="restart()">restart</button>
+</div>  
+
+<script>
+        let count = 0;
+        let inttd;
+        function start() {
+
+
+            intid = setInterval(() => {
+                document.getElementById('count').innerText=++count;
+            },1000);
+
+
+        }
+        function stop() {
+            clearInterval(intid);
+        }
+        function restart() {
+            count=0;
+            document.getElementById('count').innerText=count;
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
